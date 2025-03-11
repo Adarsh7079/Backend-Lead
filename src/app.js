@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser";
 
+const app= express()
+// Cors for proving Frontend URL to connect backend with frontend
 app.use(
     cors({
       origin: function (origin, callback) {
