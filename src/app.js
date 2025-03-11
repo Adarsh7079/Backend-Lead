@@ -4,16 +4,10 @@ import cookieParser from "cookie-parser";
 
 const app= express()
 // Cors for proving Frontend URL to connect backend with frontend
-app.use(
-    cors({
-      origin: function (origin, callback) {
-        callback(null, origin || "*"); // ✅ Allow all origins dynamically
-      },
-      credentials: true, // ✅ Allow credentials (cookies, authentication)
-      allowedHeaders: ["Content-Type", "Authorization"], // ✅ Allow necessary headers
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // ✅ Allow all HTTP methods
-    })
-  );
+app.use(cors({
+    origin: '*', // Specify the allowed origin
+    credentials: true, // Allow credentials (cookies) for login signup and local storage for Authenticationa and Authorization
+}));
 app.use(express.json({limit:'16kb'}))
 app.use(express.urlencoded({extended:true, limit:"16kb"}))
 
