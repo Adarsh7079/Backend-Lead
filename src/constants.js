@@ -1,1 +1,1 @@
-export const DB_NAME="Dubai_leads"
+export const DB_NAME="lead"
