@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser";
-
+// a
 const app= express()
 // Cors for proving Frontend URL to connect backend with frontend
 app.use(cors({
@@ -17,6 +17,7 @@ app.use(cookieParser())
 
 
 //routes import for calling leads API
+// Impoter 
 import leadRouter from "./routes/lead.routes.js"
 
 //routes declaration 
